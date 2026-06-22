@@ -1,0 +1,23 @@
+{
+    "name": "socialpostflow",
+    "displayName": "Social Post Flow",
+    "version": "0.1.0",
+    "description": "Schedule and publish social media posts across 12+ networks (Facebook, X, LinkedIn, Instagram, Threads, Pinterest, TikTok, Mastodon, Bluesky, Telegram, Google Business). Built on the Social Post Flow API.",
+    "author": {
+        "name": "Social Post Flow",
+        "url": "https://www.socialpostflow.com"
+    },
+    "homepage": "https://www.socialpostflow.com",
+    "repository": "https://github.com/socialpostflow/socialpostflow-cli",
+    "license": "MIT",
+    "skills": [
+        "skills/socialpostflow/SKILL.md"
+    ],
+    "keywords": [
+        "social-media",
+        "social-media-scheduler",
+        "agents",
+        "claude-code",
+        "wordpress"
+    ]
+}

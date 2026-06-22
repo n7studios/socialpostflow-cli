@@ -1,0 +1,42 @@
+{
+  "name": "socialpostflow-cli",
+  "version": "0.1.0",
+  "description": "Social Post Flow CLI — connect Claude, OpenAI and other agents to schedule social media posts across 12+ networks.",
+  "keywords": [
+    "social-media",
+    "social-media-scheduler",
+    "cli",
+    "agents",
+    "claude",
+    "claude-code",
+    "openai",
+    "openclaw",
+    "agent-skills",
+    "wordpress",
+    "social-post-flow"
+  ],
+  "homepage": "https://www.socialpostflow.com",
+  "bugs": "https://github.com/socialpostflow/socialpostflow-cli/issues",
+  "license": "MIT",
+  "author": "Social Post Flow <support@socialpostflow.com> (https://www.socialpostflow.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/socialpostflow/socialpostflow-cli.git"
+  },
+  "type": "module",
+  "main": "scripts/socialpostflow.js",
+  "bin": {
+    "spf": "scripts/socialpostflow.js",
+    "socialpostflow": "scripts/socialpostflow.js"
+  },
+  "files": [
+    "scripts/",
+    "skills/",
+    ".claude-plugin/",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
