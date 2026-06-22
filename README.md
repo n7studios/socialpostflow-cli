@@ -8,13 +8,35 @@ A zero-dependency Node.js CLI wrapper around the [Social Post Flow API](https://
 
 ---
 
-## Install as a Claude Code skill
+## Pick your install
 
-The fastest way to give your agent the ability to schedule posts:
+| Using                                                  | Use this                                                  |
+| ------------------------------------------------------ | --------------------------------------------------------- |
+| **Claude Code, Claude Desktop, ChatGPT Desktop**       | The [MCP server](https://www.socialpostflow.com/documentation/mcp/) (one-click connect, no setup) |
+| **Cursor, Codex, Warp, Cline, OpenCode, other agents** | The skill (see *Install as a skill* below)                |
+| **Shell scripts, CI/CD, your own tooling**             | The CLI (see *Install as a CLI* below)                    |
+
+You can use the skill and the CLI together. The skill teaches the agent *how* to use Social Post Flow; the CLI is what the agent actually runs.
+
+## Install as a skill
+
+Adds the Social Post Flow skill to your agent so it can compose and schedule posts in natural language.
+
+**Single-command install (Claude Code):**
+
+```bash
+mkdir -p ~/.claude/skills/socialpostflow && \
+  curl -L https://raw.githubusercontent.com/socialpostflow/socialpostflow-cli/main/skills/socialpostflow/SKILL.md \
+    -o ~/.claude/skills/socialpostflow/SKILL.md
+```
+
+**Multi-agent install (Cursor, Codex, Warp, Cline, OpenCode, etc.):**
 
 ```bash
 npx skills add socialpostflow/socialpostflow-cli
 ```
+
+When prompted, pick the agents you want to install for.
 
 Then ask your agent things like:
 
@@ -24,7 +46,7 @@ Then ask your agent things like:
 >
 > "Queue up these three blog promos across all my channels."
 
-The agent learns from [`SKILL.md`](skills/socialpostflow/SKILL.md), which documents the CLI's behaviour, post types, scheduling model, and common workflows.
+The agent learns from [`SKILL.md`](skills/socialpostflow/SKILL.md), which documents the post types, scheduling model, and common workflows.
 
 ## Install as a CLI
 
@@ -144,10 +166,6 @@ See [`examples/`](examples/) for shell scripts demonstrating common workflows:
 - [`schedule-week.sh`](examples/schedule-week.sh) — schedule a week's worth of posts using the queue
 - [`github-actions.yml`](examples/github-actions.yml) — publish a blog post announcement from a GitHub Action
 
-## Alternative: MCP
-
-If you're using Claude Desktop, ChatGPT Desktop, or another MCP-compatible client, you can use the Social Post Flow MCP server instead. It connects in one click with no setup. See [socialpostflow.com](https://www.socialpostflow.com) for details.
-
 ## Troubleshooting
 
 **"Not authenticated"** — Run `spf setup --key <token>` or set `SOCIALPOSTFLOW_API_TOKEN`.
@@ -166,6 +184,6 @@ MIT — see [LICENSE](LICENSE).
 
 - **Social Post Flow:** [socialpostflow.com](https://www.socialpostflow.com)
 - **API documentation:** [socialpostflow.com/documentation/api](https://www.socialpostflow.com/documentation/api/)
-- **MCP documentation:** [socialpostflow.com/documentation/api](https://www.socialpostflow.com/documentation/mcp/)
+- **MCP documentation:** [socialpostflow.com/documentation/mcp](https://www.socialpostflow.com/documentation/mcp/)
 - **WordPress Plugin:** [wordpress.org/plugins/social-post-flow](https://wordpress.org/plugins/social-post-flow/)
 - **Issues / feedback:** [github.com/socialpostflow/socialpostflow-cli/issues](https://github.com/socialpostflow/socialpostflow-cli/issues)
